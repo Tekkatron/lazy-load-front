@@ -18,6 +18,12 @@ steps:
      projectKey: 'OOfDQlJ6IMMp'
      projectName: 'Lazy Load Front'
 
+- task: SonarCloudAnalyze@1
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
+
 - script: |
     npm install -g @angular/cli
     npm install
